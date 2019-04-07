@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+var program = require('commander');
+
+
+program
+  .description('An application for searching user/ticket/organisations! Explore all the options by using --help flag.')
+
+program
+  .command('users <id>', 'search for users').alias('u')
+  .option('-n, --name <id>', 'Search for item based on id')
+  .action(() => {
+    prompt(questions).then(answers =>
+      addContact(answers));
+  })
+  .option('-n, --name <name>', 'Search for item based on name')
+
+  .command('organisations', 'search for organisations').alias('o')
+
+program
+  .command('tickets', 'search for tickets').alias('t')
+  .parse(process.argv);
+
+console.log(program.user);
+console.log(program.args);
