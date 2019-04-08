@@ -18,4 +18,8 @@ usage?
 
 example:
 
+install all the packages by running the command below from the main project directory:
+`npm install`
+
 run tests:
+`npm test`
