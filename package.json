@@ -2,37 +2,21 @@
   "name": "searcli",
   "version": "1.0.0",
   "description": "a cli tool for simple search",
-  "main": "index.js",
   "scripts": {
+    "start": "ts-node ./src/index.ts",
     "test": "jest --collect-coverage"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Caitlynn/searcli.git"
-  },
-  "author": "caitlynn zhou",
+  "author": "Caitlynn Zhou",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Caitlynn/searcli/issues"
+  "dependencies": {
+    "@types/inquirer": "0.0.35",
+    "inquirer": "^3.3.0"
   },
-  "homepage": "https://github.com/Caitlynn/searcli#readme",
   "devDependencies": {
-    "@types/core-js": "^0.9.43",
     "@types/jest": "^24.0.11",
-    "@types/ora": "^1.3.1",
     "jest": "^24.7.1",
     "ts-jest": "^24.0.2",
     "ts-node": "^3.3.0",
     "typescript": "^2.5.3"
-  },
-  "dependencies": {
-    "@types/inquirer": "0.0.35",
-    "axios": "^0.16.2",
-    "chalk": "^2.3.0",
-    "cli-table": "^0.3.1",
-    "commander": "^2.11.0",
-    "core-js": "^2.5.1",
-    "inquirer": "^3.3.0",
-    "ora": "^1.3.0"
   }
 }

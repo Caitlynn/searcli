@@ -5,7 +5,10 @@
     "outDir": "./dist",
     "sourceMap": true,
     "strict": true,
-    "importHelpers": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "lib": [
+      "dom",
+      "es2017"
+    ]
   }
 }

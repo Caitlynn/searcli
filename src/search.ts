@@ -12,7 +12,7 @@ const dataStore: DataStore = {
   organizations: require('../data/organizations.json'),
 };
 
-export function searchObject<T extends keyof DataStore>(objectName: T, field: string, value: any) {
+export function searchObject<T extends keyof DataStore>(objectName: T, field: string, target: any) {
 
   if (!dataStore.hasOwnProperty(objectName)) {
     throw new Error(`${objectName} not in ${Object.keys(dataStore)}`);
@@ -22,14 +22,12 @@ export function searchObject<T extends keyof DataStore>(objectName: T, field: st
   const results = [];
 
   for (const item of targetObject) {
-    const field_value = (item as any)[field];
+    const fieldValue = (item as any)[field];
 
-    if (field_value !== undefined) {
-      if (Array.isArray(field_value)) {
-        if ((item as any)[field].includes(value)) {
-          results.push(item);
-        }
-      } else if ((item as any)[field] == value) {
+    if (fieldValue !== undefined) {
+      if (Array.isArray(fieldValue) && fieldValue.includes(target)) {
+        results.push(item);
+      } else if (String(fieldValue) === target) {
         results.push(item);
       }
     }

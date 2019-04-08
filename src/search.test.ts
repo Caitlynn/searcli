@@ -3,7 +3,7 @@ import { searchObject } from './search';
 
 describe('test search users', () => {
   test('can search users using field id', () => {
-    expect(searchObject('users', '_id', 1).length).toBe(1);
+    expect(searchObject('users', '_id', '1').length).toBe(1);
   });
 
   test('can search users using field name', () => {
@@ -26,7 +26,7 @@ describe('test search tickets', () => {
   });
 
   test('can search tickets using field assignee id', () => {
-    expect(searchObject('tickets', 'assignee_id', 29).length).toBe(2);
+    expect(searchObject('tickets', 'assignee_id', '29').length).toBe(2);
   });
 
   test('can search tickets using field tags', () => {
