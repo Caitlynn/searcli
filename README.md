@@ -2,6 +2,7 @@
 
 ### This is a simple CLI tool to search for users, tickets and organizations.
 
+### Node version: `v10.15`
 
 ### Install all the packages by running the command below from the main project directory:
 
