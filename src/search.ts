@@ -29,7 +29,7 @@ export function searchObject<T extends keyof DataStore>(objectName: T, field: st
         if ((item as any)[field].includes(value)) {
           results.push(item);
         }
-      } else if ((item as any)[field] === value) {
+      } else if ((item as any)[field] == value) {
         results.push(item);
       }
     }
