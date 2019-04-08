@@ -9,6 +9,7 @@ console.log(
 '  ____) |  __/ (_| | |  | |____| |____ _| |_ \n',
 ' |_____/   \___|\__,_|_|    \_____|______|_____|\n',
 );
+console.log("Hi, welcome to searCLI! \n")
 
 const questions = [
     {
@@ -82,6 +83,6 @@ const questions = [
         });
       });
     } else {
-      console.log("No item matching the searching criteria!")
+      console.log("\nNo item matching the searching criteria!\n")
     }
   });
